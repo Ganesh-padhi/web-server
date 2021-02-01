@@ -8,6 +8,7 @@ const publicpath=path.join(__dirname,"../public")
 const viewspath=path.join(__dirname,"../templates/views")
 const partialspath=path.join(__dirname,"../templates/partials")
 const app=express()
+const port = process.env.PORT || 3000
 app.set("view engine","hbs")
 app.set("views",viewspath)
 hbs.registerPartials(partialspath)
@@ -64,5 +65,5 @@ app.get("*",(req,res)=>{
 //     res.send("<h1>Thist is my contactus page ?</h1>")
 // })
 
-app.listen(3000,()=>{
-    console.log("Your server Up on port number 3000")})
+app.listen(port,()=>{
+    console.log("Your server Up on port number "+3000)})
